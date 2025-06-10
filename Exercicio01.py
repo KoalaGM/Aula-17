@@ -30,8 +30,8 @@ try:
     li, ls = q1 - 1.5 * iqr, q3 + 1.5 * iqr
     print(f"\nOutliers:\nLimite inferior: {li}, Limite superior: {ls}")
 
-    out_inf = df_total[df_total['estelionato'] < li]
-    out_sup = df_total[df_total['estelionato'] > ls]
+    out_inf = df_total[df_total['estelionato'] < li].sort_values('estelionato', ascending=False)
+    out_sup = df_total[df_total['estelionato'] > ls].sort_values('estelionato', ascending=False)
 
     print("\nOutliers inferiores:")
     print(out_inf if not out_inf.empty else "Nenhum encontrado.")
