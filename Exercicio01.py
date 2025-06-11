@@ -15,7 +15,7 @@ try:
     distancia = abs((media - mediana) / mediana)
 
     print("\nTendência central:")
-    print(f"Média: {media:.2f}, Mediana: {mediana}, Distância relativa: {distancia:.2%}")
+    print(f"Média: {media:.2f}, Mediana: {mediana}, Distância relativa: {distancia:.2f}")
 
     q1, q2, q3 = np.quantile(array, [0.25, 0.5, 0.75])
     print(f"\nQuartis:\nQ1: {q1}, Q2: {q2}, Q3: {q3}")
